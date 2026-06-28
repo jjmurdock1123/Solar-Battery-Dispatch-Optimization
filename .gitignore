@@ -1,0 +1,13 @@
+# Raw source data — kept locally, far too large for git (see README "Data" section)
+/weather_data/
+/Missing_CAISO/
+/caiso_dam_lmp_parallel_mit.csv
+
+# Scratch / duplicate notebooks not part of the pipeline
+/Untitled.ipynb
+
+# Jupyter
+.ipynb_checkpoints/
+
+# OS
+.DS_Store
