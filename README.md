@@ -2,7 +2,7 @@
 
 **Robust Optimization for the San Diego Electricity Market**
 
-MIT 15.095 Machine Learning Under a Modern Optimization Lens Fall 2025
+MIT 15.095 Machine Learning Under a Modern Optimization Lens Final Project, Fall 2025
 
 Justine Murdock, Jacob Lebovitz
 
