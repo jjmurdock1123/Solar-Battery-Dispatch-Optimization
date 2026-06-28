@@ -52,13 +52,12 @@ the report for the full methodology, the December 24 case study, and discussion.
 │   ├── 05_irradiance_optimal_tree.ipynb    Julia  — Optimal Regression Tree (final GHI model)
 │   └── 06_battery_optimization.ipynb       Julia  — deterministic + robust battery dispatch, baseline
 ├── data/                                   processed inputs/intermediates (small, tracked)
+│   ├── README.md                           per-file provenance, incl. GHI prediction file lineage
 │   ├── sdge_2024_lmp.csv                   cleaned 2024 SDG&E day-ahead LMPs (output of 02)
 │   ├── weather_hourly_avg.csv              region-averaged hourly NSRDB weather (output of 03)
 │   ├── X_irr.csv / y_irr.csv               feature/target matrices for GHI forecasting (output of 04)
 │   └── ghi_preds.csv, datetime_predictions_df_final.csv, ghi_predictions_new_time.csv
-│       curated GHI forecast snapshots; ghi_predictions_new_time.csv is the one consumed by notebook 06
-│       (notebook 05 writes its raw output to ghi_oct_predictions.csv / ghi_oct_actuals.csv when rerun,
-│        not currently present since that requires a licensed IAI install — see caveat below)
+│       curated GHI forecast snapshots (output of 05); see data/README.md for which is canonical
 └── results/                                 dispatch outputs and figures (output of 06)
     ├── battery_dispatch_7days_results*.csv          hourly charge/discharge/export, per strategy
     ├── battery_dispatch_with_timestamps*.csv         same, with UTC + Pacific timestamps
@@ -102,12 +101,6 @@ free academic licenses are available for both:
 Notebooks assume Jupyter's default working directory (the notebook's own folder), so
 run them from inside `notebooks/`; all paths are relative to that location.
 
-### Known caveats
-
-- Notebook 05's `data/ghi_oct_predictions.csv`/`ghi_oct_actuals.csv` output is the raw
-  ORT prediction; the curated `data/ghi_predictions_new_time.csv` actually fed into
-  notebook 06 reflects manual reformatting (timestamp alignment to the dispatch horizon)
-  done between runs and isn't fully scripted.
-- Notebook 05's later cells (the `IAI.GridSearch` / time-based split block) depend on
-  `X_mat`, which is commented out earlier in the same notebook — uncomment that line
-  first if you want to run that alternate split.
+See `data/README.md` for the GHI prediction file lineage (which file is canonical, and
+the manual step between notebooks 05 and 06), and the in-notebook note above the
+`X_mat`-dependent cell in `05_irradiance_optimal_tree.ipynb` for a code-level caveat.
