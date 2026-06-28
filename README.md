@@ -2,7 +2,7 @@
 
 **Robust Optimization for the San Diego Electricity Market**
 
-Jacob Lebovitz, Justine Murdock /n
+Jacob Lebovitz, Justine Murdock 
 
 15.095: Machine Learning Under a Modern Optimization Lens, MIT
 
