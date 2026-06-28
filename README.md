@@ -2,9 +2,9 @@
 
 **Robust Optimization for the San Diego Electricity Market**
 
-Jacob Lebovitz, Justine Murdock 
+MIT 15.095 Machine Learning Under a Modern Optimization Lens Final Project
 
-15.095: Machine Learning Under a Modern Optimization Lens, MIT
+Justine Murdock, Jacob Lebovitz
 
 Full writeup: [`report/Machine_Learning_Final_Report.pdf`](report/Machine_Learning_Final_Report.pdf)
 
